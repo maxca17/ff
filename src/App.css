@@ -1,38 +1,113 @@
-.App {
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.header {
+  background-color: #20232a;
+  color: white;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-links {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-links li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.nav-links a {
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links a:hover {
+  text-decoration: underline;
+}
+/* Continue from the previous CSS rules */
+
+.body-content {
+  padding: 2rem;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.body-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.body-content h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.body-content p {
+  font-size: 1.2rem;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+/* Continue from the previous CSS rules */
+
+.footer {
+  background-color: #20232a;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  font-size: 1.1rem;
+}
+.footer {
+  position: bottom;
+}
+.footer-bottom {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
