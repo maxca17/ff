@@ -11,7 +11,7 @@ function Footer() {
                 <div className="footer-section">
                     <h4>Contact</h4>
                     <p>Email: contact@[yourcompany].com</p>
-                    <p>Phone: 469-766-6325</p>
+                    <p>Phone: +1 469-766-6325</p>
                 </div>
                 <div className="footer-section">
                     <h4>Follow Us</h4>
@@ -20,7 +20,7 @@ function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} [General Sales Co. LLC]. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} General Sales Co. LLC. All rights reserved.</p>
             </div>
         </footer>
     );
