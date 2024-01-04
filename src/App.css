@@ -7,8 +7,9 @@
 
 body, html {
   height: 100%;
-  margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #121212; /* Dark mode background */
+  color: white; /* Text color for dark mode */
 }
 
 /* Header styles */
@@ -16,41 +17,45 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(10, 15, 28, 0.9); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  backdrop-filter: blur(10px); /* Blur effect for the background */
 }
 
 .logo {
   font-size: 1.5rem;
   color: white;
   font-weight: bold;
-  flex-grow: 1;
 }
 
 /* Navigation styles */
 .nav-links {
   list-style-type: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  flex-grow: 2;
 }
 
 .nav-links li {
   padding: 0 1rem;
 }
 
-.nav-links a {
+.nav-links a, .nav-links button {
   color: white;
   text-decoration: none;
+  background: none;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links button:hover {
   color: #1e90ff; /* Highlight color */
 }
 
@@ -66,20 +71,21 @@ body, html {
 }
 
 .main-logo {
-  max-width: 300px;
-  margin-bottom: 2rem;
+  max-width: 100%;
+  height: auto;
+  margin-top: 5rem; /* Adjust space for the logo */
 }
 
 /* Footer styles */
 .footer {
-  background: rgba(10, 15, 28, 0.9);
-  color: white;
+  background: rgba(0, 0, 0, 0.8);
   padding: 1rem 2rem;
   position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
   z-index: 1000;
+  backdrop-filter: blur(10px); /* Blur effect for the background */
 }
 
 .footer-content {
@@ -113,5 +119,107 @@ body, html {
 
   .footer-content {
     flex-direction: column;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+  min-width: 300px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  cursor: pointer;
+}
+/* Adjust logo size */
+.main-logo {
+  width: auto; /* Adjust width as necessary, or use max-width: 100%; for full width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 500px; /* Limit the logo size to not be too large */
+  margin-top: 2rem; /* Adjust top margin to ensure it doesn't overlap the header */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Give some space between the logo and the navigation links */
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li,
+  .nav-links a,
+  .nav-links button {
+    padding: 0.5rem 1rem;
+  }
+
+  .main-logo {
+    max-width: 90%; /* Adjust logo size for smaller screens */
+    margin-top: 1rem; /* Reduce top margin on smaller screens */
+  }
+
+  .body-content {
+    padding: 1rem;
+    padding-top: 3rem; /* Give some space under the header */
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .modal-content {
+    width: 90%; /* Adjust modal width for smaller screens */
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+}
+
+/* Ensure the modal close button is always visible on small screens */
+@media (max-width: 480px) {
+  .close {
+    font-size: 22px;
   }
 }
