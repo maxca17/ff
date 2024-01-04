@@ -223,3 +223,66 @@ body, html {
     font-size: 22px;
   }
 }
+/* Adjust logo size */
+.main-logo {
+  width: auto; /* Adjust width as necessary, or use max-width: 100%; for full width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 500px; /* Limit the logo size to not be too large */
+  margin-top: 2rem; /* Adjust top margin to ensure it doesn't overlap the header */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Give some space between the logo and the navigation links */
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li,
+  .nav-links a,
+  .nav-links button {
+    padding: 0.5rem 1rem;
+  }
+
+  .main-logo {
+    max-width: 90%; /* Adjust logo size for smaller screens */
+    margin-top: 1rem; /* Reduce top margin on smaller screens */
+  }
+
+  .body-content {
+    padding: 1rem;
+    padding-top: 3rem; /* Give some space under the header */
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .modal-content {
+    width: 90%; /* Adjust modal width for smaller screens */
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+}
+
+/* Ensure the modal close button is always visible on small screens */
+@media (max-width: 480px) {
+  .close {
+    font-size: 22px;
+  }
+}
