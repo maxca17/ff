@@ -21,11 +21,11 @@ function App() {
       <Body />
       <Footer />
       {showContactInfo && (
-        <div className="modal">
+          <div className="modal active">
           <div className="modal-content">
             <span className="close" onClick={handleCloseClick}>&times;</span>
             <h4>Contact Information</h4>
-            <p>Email: contact@frostframegaming.com</p>
+            <p>Email: frostframegaming@gmail.com</p>
             <p>Phone: +1 469-766-6325</p>
             {/* Additional contact info */}
           </div>

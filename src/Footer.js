@@ -10,7 +10,7 @@ function Footer() {
                 </div>
                 <div className="footer-section">
                     <h4>Contact</h4>
-                    <p>Email: contact@[yourcompany].com</p>
+                    <p>Email: frostframegaming@gmail.com</p>
                     <p>Phone: +1 469-766-6325</p>
                 </div>
                 <div className="footer-section">

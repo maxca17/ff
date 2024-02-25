@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.png'; // Make sure the path is correct
+import ProductModal from './ProductModal'; // Ensure you have this component created
+import productImage from './3060ti.jpg'; // Import the image here
 
 function Body() {
+  // State to hold the currently selected product for the modal
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  // Dummy product data - replace with your actual data
+  const products = [
+    {
+      name: 'Ryzen 5 3600 & 3060 TI',
+      description: 'Description for product 1',
+      price: '$865',
+      image: productImage,
+    },
+    {
+      name: 'Product Name 2',
+      description: 'Description for product 2',
+      price: '$1299',
+      image: '/path-to-product-image-2.jpg', // Replace with actual image path
+    },
+    // Add more products as needed
+  ];
+
   return (
     <div className="body-content">
       <img src={logo} alt="FrostFrame Gaming Logo" className="main-logo" />
@@ -22,13 +44,29 @@ function Body() {
 
       <section className="products">
         <h2>Our Products</h2>
-        {/* Product listings would go here */}
+        <div className="product-grid">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="product-item"
+              onClick={() => setSelectedProduct(product)} // Set the selected product on click
+            >
+              <img src={product.image} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p>{product.description}</p>
+              <span>Price: {product.price}</span>
+            </div>
+          ))}
+        </div>
       </section>
-      
+
+      {selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+      )}
+
       {/* Additional sections as needed */}
     </div>
   );
 }
 
 export default Body;
-
