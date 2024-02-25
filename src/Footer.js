@@ -6,7 +6,7 @@ function Footer() {
             <div className="footer-content">
                 <div className="footer-section">
                     <h4>About Us</h4>
-                    <p>Learn more about [Your Gaming PC Company Name] and our commitment to providing top-tier gaming experiences.</p>
+                    <p>Coming Soon</p>
                 </div>
                 <div className="footer-section">
                     <h4>Contact</h4>
@@ -16,7 +16,7 @@ function Footer() {
                 <div className="footer-section">
                     <h4>Follow Us</h4>
                     {/* Icons or links to social media platforms */}
-                    <p>[Social Media Icons]</p>
+                    <p>Coming Soon</p>
                 </div>
             </div>
             <div className="footer-bottom">

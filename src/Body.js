@@ -11,9 +11,10 @@ function Body() {
   const products = [
     {
       name: 'Ryzen 5 3600 & 3060 TI',
-      description: 'Description for product 1',
+      description: 'Ryzen 5 3600, 16GB DDR4 Ram, GeForce GTX 3060 TI, 1TB SSD, 750W PSU, Windows 11 Pro Included',
       price: '$865',
       image: productImage,
+      link: "https://www.amazon.com/dp/B0CW6BYGT4"
     },
     {
       name: 'Product Name 2',

@@ -12,7 +12,9 @@ function ProductModal({ product, onClose }) {
         <img src={product.image} alt={product.name} />
         <p>{product.description}</p>
         <span>Price: {product.price}</span>
-        {/* Additional product info */}
+        {/* Add purchase link */}
+        <div></div>
+        <a href={product.purchaseLink} target="_blank" rel="noopener noreferrer" className="purchase-button">Buy Now</a>
       </div>
     </div>
   );
