@@ -17,11 +17,11 @@ function Body() {
       purchaseLink: "https://www.amazon.com/dp/B0CW6BYGT4"
     },
     {
-      name: 'Product Name 2',
-      description: 'Description for product 2',
-      price: '$1299',
-      image: '/path-to-product-image-2.jpg', // Replace with actual image path
-      
+      name: 'Ryzen 5 5600G',
+      description: 'Coming Soon',
+      price: '$600',
+      image: '/path-to-product-image-2.jpg', // Replace with actual image path 
+
     },
     // Add more products as needed
   ];
