@@ -14,7 +14,8 @@ function ProductModal({ product, onClose }) {
         <span>Price: {product.price}</span>
         {/* Add purchase link */}
         <div></div>
-        <a href={product.purchaseLink} target="_blank" rel="noopener noreferrer" className="purchase-button">Buy Now</a>
+        <a href={product.purchaseLink} target="_blank" rel="noopener noreferrer" className="purchase-button"> Buy Now</a>
+
       </div>
     </div>
   );
