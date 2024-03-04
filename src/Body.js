@@ -12,14 +12,14 @@ function Body() {
     {
       name: 'Ryzen 5 3600 & 3060 TI',
       description: 'Ryzen 5 3600, 16GB DDR4 Ram, GeForce GTX 3060 TI, 1TB SSD, 750W PSU, Windows 11 Pro Included',
-      price: '$865',
+      price: '$799.95',
       image: productImage,
       purchaseLink: "https://www.amazon.com/dp/B0CW6BYGT4"
     },
     {
       name: 'Ryzen 5 5600G',
-      description: 'Coming Soon',
-      price: '$600',
+      description: 'Ryzen 5 5600G, 16GB DDR4 Ram, 1TB SSD, 750W PSU, Windows 11 Pro Included: Coming Soon',
+      price: '$550',
       image: '/path-to-product-image-2.jpg', // Replace with actual image path 
 
     },
